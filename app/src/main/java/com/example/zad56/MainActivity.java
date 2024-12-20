@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Inicjalizacja widoków
+
         licznikPolubien = findViewById(R.id.licznikPolubien);
         obszarInformacji = findViewById(R.id.obszarInformacji);
         poleEmail = findViewById(R.id.poleEmail);
@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         Button przyciskZapisz = findViewById(R.id.przyciskZapisz);
         Button przyciskPokazUczestnika = findViewById(R.id.przyciskPokazUczestnika);
 
-        // Funkcjonalność przycisku "Polub"
+
         przyciskPolub.setOnClickListener(v -> {
             liczbaPolubien++;
             aktualizujWyswietlaniePolubien();
         });
 
-        // Funkcjonalność przycisku "Usuń polubienie"
+
         przyciskUsunPolubienie.setOnClickListener(v -> {
             if (liczbaPolubien > 0) {
                 liczbaPolubien--;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Funkcjonalność przycisku "Zapisz"
+
         przyciskZapisz.setOnClickListener(v -> {
             String email = poleEmail.getText().toString();
             String haslo = poleHaslo.getText().toString();
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Funkcjonalność przycisku "Pokaż uczestnika"
+
         przyciskPokazUczestnika.setOnClickListener(v -> {
             if (!ostatniZarejestrowanyEmail.isEmpty()) {
                 obszarInformacji.setText(ostatniZarejestrowanyEmail);
